@@ -66,7 +66,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     white-space: nowrap;
-    color: white;
+    background: white;
     box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.4);
     border-radius: 2px;
     max-height: 250px;
