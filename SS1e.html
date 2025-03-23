@@ -152,35 +152,6 @@ function videovisible() {
     document.getElementById('loading').style.display = 'none'
 }
 </script> 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Get current UTC time
-    const now = new Date();
-    
-    // Convert UTC to Kolkata time (UTC+5:30)
-    const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
-    
-    const day = istTime.getUTCDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-    const hours = istTime.getUTCHours(); // Get hours in 24-hour format
 
-    let accessAllowed = false;
-
-    if (day >= 1 && day <= 5) {
-        // Monday to Friday: 18:00 - 23:59 IST
-        if (hours >= 18 && hours < 24) {
-            accessAllowed = true;
-        }
-    } else {
-        // Saturday & Sunday: 14:00 - 23:59 IST
-        if (hours >= 14 && hours < 24) {
-            accessAllowed = true;
-        }
-    }
-
-    if (!accessAllowed) {
-        window.location.href = "off.html"; // Redirect if outside allowed time
-    }
-});
-</script> 
 </body>
 </html>
