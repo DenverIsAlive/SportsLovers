@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="We try to give all the matches links for free to all the people who are in our friends circle.">
-      <meta name="keywords" content="sports, cricket, Denver is Alive, DenverisAlive, Denver1769, free live match link">
+      <meta name="keywords" content="sports, sports live, cricket, Denver is Alive, DenverisAlive, Denver1769, free live match link">
      <meta name="author" content="Denver1769">
        <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
@@ -105,11 +105,48 @@
         .footer a:hover {
             text-decoration: underline;
         }
+        
+        @keyframes marquee {
+    100% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.marquee-container {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    top: 8%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 13s linear infinite;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
     </style>
 </head>
 <body>
 
     <h1>IPL 2025<div class="icon-container">
+    	<div class="marquee-container">
+    <p class="marquee">
+        <span class="blink">⚠️</span> If Player Showing error then Refresh the Page otherwise clear cache cookies of this site from your browser
+    </p>
+</div>
         <a href="English.html" class="icon-box">
             <img src="https://upload.wikimedia.org/wikipedia/en/1/18/2025_IPL_logo.png" alt="Icon">
             <span>Willow Cricket</span>
@@ -122,17 +159,17 @@
         
         <a href="Hindi.html" class="icon-box">
             <img src="https://upload.wikimedia.org/wikipedia/en/1/18/2025_IPL_logo.png" alt="Icon">
-            <span>SS 2 HINDI HD</span>
+            <span>SS2 HINDI HD Android Only</span>
         </a>
         
         <a href="SP_sd.html" class="icon-box">
             <img src="https://upload.wikimedia.org/wikipedia/en/1/18/2025_IPL_logo.png" alt="Icon">
-            <span>Sports18 Mob</span>
+            <span>SS2 Mob SD</span>
         </a>
         
         <a href="Sports18HD.html" class="icon-box">
             <img src="https://upload.wikimedia.org/wikipedia/en/1/18/2025_IPL_logo.png" alt="Icon">
-            <span>SS2 iOS & PC</span>
+            <span>SS2 Hindi HD<br>iOS & Desktop</span>
         </a>
     </div>
     
