@@ -162,14 +162,15 @@
         inactive: "white",
         background: "black"
     },
-    autostart: true,
-    preload: "none",
-    repeat: true,
-    volume: 100,  // Fixed case
-    mute: false,
-    stretching: "exactfit",
-    width: "100%", 
-    cast: {}
+    "autostart": true,
+ "preload": "none",
+  "repeat": true,
+  "Volume": "100",
+  "mute": false,
+  "stretching": "exactfit",
+  "width": "100%", 
+  "cast": {},
+    "type": "hls",
 });
 
 // Function to fetch JSON data from URL
@@ -177,39 +178,55 @@ async function fetchJsonData(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error("Network response was not ok");
+            throw new Error('Network response was not ok');
         }
         return await response.json();
     } catch (error) {
-        console.error("Error fetching JSON:", error);
+        console.error('Error fetching JSON:', error);
     }
 }
 
-// Function to set file based on ID in JSON
+// Function set file based on ID JSON data
 async function setFileFromJson(url) {
     const jsonData = await fetchJsonData(url);
     if (!jsonData) {
-        console.error("No JSON data available");
+        console.error('No JSON data available');
         return;
     }
 
     // Get the ID from the URL
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const id = urlParams.get("id");
+    const id = urlParams.get('id');
 
     // Find the corresponding item in JSON
     const item = jsonData.find(item => item.id === id);
     if (item) {
-        playerInstance.load([{ file: item.link }]); // Use `load()` instead of `setup()`
-        playerInstance.play();
+        playerInstance.setup({
+        	skin: {
+        name: "Denver",
+        active: "RED",
+        inactive: "white",
+        background: "black"
+    },
+    "autostart": true,
+ "preload": "none",
+  "repeat": true,
+  "Volume": "100",
+  "mute": false,
+  "stretching": "exactfit",
+  "width": "100%", 
+  "cast": {},
+    "type": "hls",
+            file: item.link
+        });
     } else {
-        console.error("No matching item found in JSON data for ID:", id);
+        console.error('No matching item found in JSON data for ID:', id);
     }
 }
 
-// Call the function to set file from JSON URL
-setFileFromJson("https://denverisalive.github.io/SportsLovers/M1.json");
+// Call the function to set file attribute from JSON URL
+setFileFromJson('https://denverisalive.github.io/SportsLovers/M1.json');
 </script>
 
 <div id="loading" class="loading">
