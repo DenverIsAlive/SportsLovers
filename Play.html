@@ -162,15 +162,14 @@
         inactive: "white",
         background: "black"
     },
-    "autostart": true,
- "preload": "none",
-  "repeat": true,
-  "Volume": "100",
-  "mute": false,
-  "stretching": "exactfit",
-  "width": "100%", 
-  "cast": {},
-    "type": "hls",
+    autostart: true,
+    preload: "none",
+    repeat: true,
+    volume: 100,  // Fixed case
+    mute: false,
+    stretching: "exactfit",
+    width: "100%", 
+    cast: {}
 });
 
 // Function to fetch JSON data from URL
@@ -178,42 +177,39 @@ async function fetchJsonData(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("Network response was not ok");
         }
         return await response.json();
     } catch (error) {
-        console.error('Error fetching JSON:', error);
+        console.error("Error fetching JSON:", error);
     }
 }
 
-// Function to set file attribute based on ID from JSON data
+// Function to set file based on ID in JSON
 async function setFileFromJson(url) {
     const jsonData = await fetchJsonData(url);
     if (!jsonData) {
-        console.error('No JSON data available');
+        console.error("No JSON data available");
         return;
     }
 
     // Get the ID from the URL
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const id = urlParams.get('id');
+    const id = urlParams.get("id");
 
-    // Find the corresponding item in JSON data
+    // Find the corresponding item in JSON
     const item = jsonData.find(item => item.id === id);
     if (item) {
-        playerInstance.setup({
-        	autostart: true,
-        mute: false,
-            file: item.link
-        });
+        playerInstance.load([{ file: item.link }]); // Use `load()` instead of `setup()`
+        playerInstance.play();
     } else {
-        console.error('No matching item found in JSON data for ID:', id);
+        console.error("No matching item found in JSON data for ID:", id);
     }
 }
 
-// Call the function to set file attribute from JSON URL
-setFileFromJson('https://denverisalive.github.io/SportsLovers/M1.json');
+// Call the function to set file from JSON URL
+setFileFromJson("https://denverisalive.github.io/SportsLovers/M1.json");
 </script>
 
 <div id="loading" class="loading">
