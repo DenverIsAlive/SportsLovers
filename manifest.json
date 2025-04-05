@@ -1,7 +1,7 @@
 {
   "name": "Sports Lovers App",
   "short_name": "Sports Lovers",
-  "start_url": "/SportsLovers",
+  "start_url": "/SportsLovers/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#317EFB",
