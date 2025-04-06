@@ -3,5 +3,11 @@
   "Team1": "SRH",
   "Team2": "GT",
   "logo": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4309/1743868234309-i"
+  },
+  {
+    "id": "live-highlights",
+    "name": "JC Sports 24x7",
+    "logo": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4309/1743868234309-i",
+    "link": "https://prod-sports-eng-cf.jiocinema.com/bpk-tv/IDCDemo_IPL23_Eng_BTS/Fallback/index.m3u8"
   }
 ]
