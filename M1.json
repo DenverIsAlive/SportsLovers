@@ -1,13 +1,21 @@
 [
   {
-  "Team1": "SRH",
-  "Team2": "GT",
-  "logo": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4309/1743868234309-i"
+  "Team1": "RCB",
+  "Team2": "DC",
+  "logo": "https://denverisalive.github.io/SportsLovers/sports_icon.jpg"
   },
   {
-    "id": "live-highlights",
-    "name": "JC Sports 24x7",
-    "logo": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4309/1743868234309-i",
-    "link": "https://prod-sports-eng-cf.jiocinema.com/bpk-tv/IDCDemo_IPL23_Eng_BTS/Fallback/index.m3u8"
+    "id": "Hin",
+    "name": "HINDI",
+    "logo": "https://v3img.voot.com/v3Storage/assets/m_024_rcb_vs_dc_tata_ipl_web-1744212390971.jpg",
+    "link": "https://prod-sports-hin-fa.jiocinema.com/hls/live/2117033/inallow-ipl-2025/hin/1540040246/15mindvrm0153748b1625e24a9ebc935a7faca3fe7810april2025/master.m3u8",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+  },
+  {
+    "id": "ENG",
+    "name": "ENGLISH",
+    "logo": "https://v3img.voot.com/v3Storage/assets/m_024_rcb_vs_dc_tata_ipl_web-1744212390971.jpg",
+    "link": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2117030/inallow-ipl-2025/eng/1540040246/15mindvrm0153748b1625e24a9ebc935a7faca3fe7810april2025/master_apm.m3u8",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
   }
 ]
