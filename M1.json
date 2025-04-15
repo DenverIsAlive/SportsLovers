@@ -131,9 +131,19 @@
     "userAgent": "Denver1769"
   },
   {
-    "id": "live-highlights",
-    "name": "JC Sports 24x7",
-    "logo": "https://v3img.voot.com/resizeMedium,w_1090,h_613/v3Storage/assets/jc_sports_horizontal_tray-1695561700528.jpg",
-    "link": "https://prod-sports-eng-cf.jiocinema.com/bpk-tv/IDCDemo_IPL23_Eng_BTS/Fallback/index.m3u8"
+    "id": "willow-1",
+    "name": "Willow 1",
+    "logo": "https://cricket.willow.tv/_nuxt/img/willow_2_blue_logo.fa6b253.png",
+    "link": "https://a142aivottepl-a.akamaihd.net/pdx-nitro/live/clients/dash/enc/7cqoldwqqa/out/v1/e57ae5ce43324d0b83a30562494b2968/cenc.mpd",
+    "drmScheme": "clearkey",
+    "drmLicense": "b141d846a4f4d51663031be887e0988c:bb105cb4d42d76a9ba10e3c01109fa58"
+  },
+  {
+    "id": "willow-2",
+    "name": "Willow 2",
+    "logo": "https://cricket.willow.tv/_nuxt/img/willow_2_blue_logo.fa6b253.png",
+    "link": "https://a201aivottlinear-a.akamaihd.net/OTTB/lhr-nitro/clients/dash/enc/f60kqesunw/out/v1/a435ed7a00f947deb4369b46d8f2fb70/cenc.mpd",
+    "drmScheme": "clearkey",
+    "drmLicense": "1779c27b9d077a3ba0c9cc1bb9a94b9f:cc5cf3b7928fb9e0a1ee6a8b566f0a8e"
   }
 ]
